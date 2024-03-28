@@ -1,54 +1,73 @@
+/* General Styles */
 .container {
   width: 280px;
   color: #314d3e;
+  font-family: Arial, sans-serif; /* Use a common font for better readability */
 }
 
 .title {
-  font-size: 14px;
+  font-size: 18px; /* Increased font size for better emphasis */
   font-weight: bold;
-  padding: 8px;
+  padding: 12px 8px; /* Increased padding for better spacing */
+  background-color: #f0f0f0; /* Light gray background to distinguish title */
+  border-bottom: 2px solid #66afe9; /* Blue border at the bottom for a nice separation */
+  margin-bottom: 15px; /* Increased margin for better separation */
 }
 
+/* Textbox Styles */
 .textbox {
-  width: 100%;
-  font-size: 12px;
+  width: calc(100% - 4px); /* Adjusted width to accommodate padding */
+  font-size: 14px; /* Increased font size for better readability */
   margin: 0;
-  padding: 0px 2px;
+  padding: 6px 8px; /* Increased padding for better spacing */
+  border: 1px solid #ccc; /* Added border for clearer distinction */
+  border-radius: 5px; /* Rounded corners for a softer look */
+  transition: border-color 0.3s ease; /* Smooth transition on focus */
 }
 
 .textbox:focus {
-  outline: 0;
+  outline: none;
   border-color: #66afe9;
 }
 
+/* Bookmark Styles */
 .bookmarks {
-  margin: 5px 5px;
-  padding: 3px;
+  margin: 10px 0; /* Increased margin for better spacing */
+  padding: 5px;
 }
 
 .bookmark {
   display: flex;
-  border-bottom-color: #00254d;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-radius: 0.8rem;
-  padding: 3px;
-  padding-bottom: 7px;
-  margin-bottom: 7px;
+  align-items: center; /* Vertically center contents */
+  border: 1px solid #ccc; /* Added border for clearer distinction */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  padding: 10px;
+  margin-bottom: 10px; /* Increased margin for better separation */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.bookmark:hover {
+  background-color: #f9f9f9; /* Light gray background on hover for highlighting */
 }
 
 .bookmark-title {
-  padding-left: 2px;
+  flex: 1; /* Take remaining space for title */
+  padding-left: 10px; /* Increased padding for better alignment */
+  font-weight: bold; /* Bold font for better readability */
 }
 
 .bookmark-controls img {
-  margin: 0 4px;
-  width: 18px;
-  height: 18px;
+  margin: 0 8px; /* Increased margin for better spacing */
+  width: 20px;
+  height: 20px;
   cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.bookmark-controls img:hover {
+  transform: scale(1.2); /* Scale up on hover for visual feedback */
 }
 
 .bookmark-controls {
-  flex: auto;
-  text-align: right;
+  flex-shrink: 0; /* Prevent controls from shrinking */
 }
